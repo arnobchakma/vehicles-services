@@ -15,38 +15,38 @@ import NoMatch from './components/NoMatch/NoMatch';
 
 export const UserContext = createContext();
 const App = () => {
-    const [loggedInUser, setLoggedInUser] = useState({});
-    return (
-        <div className="main">
-            <div className="container">
-            <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-                <Router>
-                    <Header/>
-                    <Switch>
-                        <Route exact path="/login">
-                            <Login/>
-                        </Route>
-                        <Route exact path="/signup">
-                            <Signup/>
-                        </Route>
-                        <PrivateRoute exact path="/:vehicle">
-                            <Destinations/>
-                        </PrivateRoute>
-                        <PrivateRoute exact path="/destination">
-                            <Destinations/>
-                        </PrivateRoute>
-                        <Route exact path="/">
-                            <Home/>
-                        </Route>
-                        <Route exact path="*">
-                            <NoMatch/>
-                        </Route>
-                    </Switch>
-                </Router>
-            </UserContext.Provider>
-            </div>
-        </div>
-    );
+  const [loggedInUser, setLoggedInUser] = useState({});
+  return (
+    <div className="main">
+      <div className="container">
+        <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
+          <Router>
+            <Header />
+            <Switch>
+              <Route exact path="/login">
+                <Login />
+              </Route>
+              <Route exact path="/signup">
+                <Signup />
+              </Route>
+              <PrivateRoute exact path="/:vehicle">
+                <Destinations />
+              </PrivateRoute>
+              <PrivateRoute exact path="/destination">
+                <Destinations />
+              </PrivateRoute>
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route exact path="*">
+                <NoMatch />
+              </Route>
+            </Switch>
+          </Router>
+        </UserContext.Provider>
+      </div>
+    </div>
+  );
 };
 
 export default App;

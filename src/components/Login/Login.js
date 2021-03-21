@@ -1,12 +1,12 @@
 import React, { useContext, useState } from 'react';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import { UserContext } from '../../App';
-import OtherLogIn from '../OthersLogIn/OthersLogIn';
 import Form from './Form';
 import './Login.css';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import firebaseConfig from '../AuthConfig/firebaseConfig';
+import OthersLogIn from '../OthersLogIn/OthersLogIn';
 
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
@@ -82,7 +82,6 @@ const Login = () => {
                     history.replace(from);
                 })
                 .catch((error) => {
-                    var errorCode = error.code;
                     var errorMessage = error.message;
                     // set up result
                     const newResult = { ...result };
@@ -103,7 +102,7 @@ const Login = () => {
                     <h4 className="text-center">Don't have an account? <Link className="text-danger" to="/signup">Create an account</Link></h4>
                 </div>
             </div>
-            <OtherLogIn />
+            <OthersLogIn />
         </div>
     );
 };

@@ -13,33 +13,33 @@ if (!firebase.apps.length) {
 
 const Header = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    const {name, email} = loggedInUser;
+    const { name, email } = loggedInUser;
     const handleLogOut = () => {
-        firebase.auth().signOut().then(() => {
-            // Sign-out successful.
-            setLoggedInUser({});
-          }).catch((error) => {
-            // An error happened.
-          });
+        firebase.auth().signOut()
+            .then(() => {
+                setLoggedInUser({});
+            }).catch((error) => {
+                console.log(error)
+            });
     }
     return (
         <Navbar expand="lg" className="header">
             <Link to="/" className="navbar-brand">Vehicles Services</Link>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ml-auto">
-                <Link className="nav-link" to="/">Home</Link>
-                <Link className="nav-link" to="/destination">Destination</Link>
-                <Link className="nav-link" to="/">Blog</Link>
-                <Link className="nav-link" to="/">Contact</Link>
-                {
-                    email ?  <NavDropdown title={name} id="basic-nav-dropdown">
-                     <NavDropdown.Item href="#action/3.1">Profile</NavDropdown.Item>    
-                    <NavDropdown.Item onClick={handleLogOut}>Log Out</NavDropdown.Item>
-                 </NavDropdown> : <Link className="nav-link" to="/login"><button className="btn btn-warning">Login</button></Link>
-                }
-               
-            </Nav>
+                <Nav className="ml-auto">
+                    <Link className="nav-link" to="/">Home</Link>
+                    <Link className="nav-link" to="/destination">Destination</Link>
+                    <Link className="nav-link" to="/">Blog</Link>
+                    <Link className="nav-link" to="/">Contact</Link>
+                    {
+                        email ? <NavDropdown title={name} id="basic-nav-dropdown">
+                            <NavDropdown.Item href="#action/3.1">Profile</NavDropdown.Item>
+                            <NavDropdown.Item onClick={handleLogOut}>Log Out</NavDropdown.Item>
+                        </NavDropdown> : <Link className="nav-link" to="/login"><button className="btn btn-warning">Login</button></Link>
+                    }
+
+                </Nav>
             </Navbar.Collapse>
         </Navbar>
     );

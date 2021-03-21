@@ -9,7 +9,7 @@ const Form = (props) => {
         result,
         loading
     } = props;
-    
+
     return (
         <form onSubmit={handleSubmit}>
             <div className="form-group">
