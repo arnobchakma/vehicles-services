@@ -1,0 +1,27 @@
+[
+    {
+        "id" : 1,
+        "type" : "Bike",
+        "img" : "https://www.mototechindia.com/wp-content/uploads/2021/03/yamaha-mt-10.jpg",
+        "price": "100"
+    },
+    {
+        "id" : 2,
+        "type" : "Car",
+        "img" : "http://pngimg.com/uploads/ferrari/ferrari_PNG10680.png",
+        "price": "150"
+    },
+    {
+        "id" : 3,
+        "type" : "Bus",
+        "img" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmbt2womqLo_myzshfxVoZcUvrns2QhNjO1Q&usqp=CAU",
+        "price": "80"
+    },
+    {
+        "id" : 4,
+        "type" : "Train",
+        "img" : "http://pngimg.com/uploads/trian/trian_PNG16615.png",
+        "price": ""
+    }
+    
+]

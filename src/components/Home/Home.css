@@ -1,0 +1,9 @@
+.home-width{
+    margin-top: 150px;
+}
+
+@media only screen and (max-width: 600px) {
+    .home-width{
+        margin-top: 100px;
+    }
+  }
