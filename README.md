@@ -7,7 +7,7 @@
 #### Then click on the search button with the date of user depature.
 
 ## Used Technologies
-#### $Html
+#### Html
 #### CSS
 #### Javascript
 #### React
