@@ -14,6 +14,8 @@ if (!firebase.apps.length) {
 const Header = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const { name, email } = loggedInUser;
+
+    // Handle Logout
     const handleLogOut = () => {
         firebase.auth().signOut()
             .then(() => {

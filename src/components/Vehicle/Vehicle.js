@@ -9,7 +9,7 @@ const Vehicle = (props) => {
         history.push(`/${type}`);
     }
     return (
-        <div className="col-md-3">
+        <div className="col-lg-3 col-md-6">
             <div className="card" onClick={() => handleVehicle(type)}>
                 <div className="card-body">
                     <img src={img} alt={type} />

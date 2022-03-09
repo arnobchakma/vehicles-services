@@ -1,13 +1,10 @@
-.destination{
-    margin-top: 100px;
-}
 .location-input{
     background-color: rgb(47 241 214 / 68%);
     padding: 25px;
     border-radius: 2px;
 }
 .location-map{
-    background-color: #ffffffb8;
+    background-color: #1cc2bab8;
     padding: 25px;
     border-radius: 2px;
 }
