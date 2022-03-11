@@ -167,7 +167,7 @@ const Signup = () => {
     return (
         <div className="signup">
             <div className="signup-form">
-                <h3>Create an account</h3>
+                <h3 className='text-primary'>Create an account</h3>
                 <Form handleCreateUser={handleCreateUser} handleChange={handleChange} error={error} success={user.success} loading={loading} />
                 <div className="other-tools">
                     <h4 className="text-center">Already have an account? <Link to="/login">Login</Link></h4>

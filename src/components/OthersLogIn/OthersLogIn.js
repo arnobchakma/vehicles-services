@@ -55,6 +55,7 @@ const OthersLogIn = () => {
             setUser(updateUser);
         });
     }
+    
     return (
         <>
             <h4 className="text-center">--------- Or ----------</h4>
@@ -63,8 +64,8 @@ const OthersLogIn = () => {
                     isLoggedIn ? <p className="alert alert-success text-center">{result}</p> 
                     :  <p className="alert-warning text-center">{result}</p>
                 }
-                <button className="btn btn-danger btn-block" onClick={() => handleSignUp(googleProvider)}> <FontAwesomeIcon icon={faGoogle}/> Continue With Google</button>
-                <button className="btn btn-success btn-block" onClick={() => handleSignUp(githubProvider)}> <FontAwesomeIcon icon={faGithub}/> Continue With Github</button>
+                <button className="btn btn-info btn-block" onClick={() => handleSignUp(googleProvider)}> <FontAwesomeIcon icon={faGoogle}/> Continue With Google</button>
+                <button className="btn btn-primary btn-block" onClick={() => handleSignUp(githubProvider)}> <FontAwesomeIcon icon={faGithub}/> Continue With Github</button>
             </div>
        </> 
     );

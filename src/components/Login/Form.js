@@ -12,13 +12,11 @@ const Form = (props) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <input type="text" className={user.email ? "form-control is-valid" : "form-control is-invalid"} onChange={handleChange} name="email" required />
+            <div className="form-group my-4">
+                <input type="text" placeholder='Email' className={user.email ? "form-control is-valid" : "form-control is-invalid"} onChange={handleChange} name="email" required />
             </div>
             <div className="form-group">
-                <label htmlFor="password">Password</label>
-                <input type="password" className={user.password ? "form-control is-valid" : "form-control is-invalid"} onChange={handleChange} name="password" required />
+                <input type="password" placeholder='Password' className={user.password ? "form-control is-valid" : "form-control is-invalid"} onChange={handleChange} name="password" required />
             </div>
             <div className="from-group">
                 <div className="login-tools">

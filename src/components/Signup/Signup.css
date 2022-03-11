@@ -1,10 +1,12 @@
 .signup{
-    background-color: white;
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgb(248, 248, 248);
     padding: 50px;
-    margin-top: 100px;
     border-radius: 20px;
+    margin-top: 20px;
 }
+
 .signup-form{
-    border: 1px solid #e0e0e0;
     padding: 15px;
 }
