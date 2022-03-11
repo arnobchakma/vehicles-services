@@ -92,6 +92,7 @@ const Login = () => {
             });
       }
       e.preventDefault();
+      e.target.reset();
    }
    return (
       <div className="login">

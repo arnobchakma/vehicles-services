@@ -144,14 +144,15 @@ const Signup = () => {
                     setLoading(false);
                 });
         } else {
-            // update user info
             const updateUser = { ...user };
             updateUser.success = "Input Field is Wrong";
             setUser(updateUser);
         }
         e.preventDefault();
+        e.target.reset();
     }
-    // update user info 
+
+    // Update user info 
     const updateUserInfo = (name) => {
         var user = firebase.auth().currentUser;
         user.updateProfile({
@@ -163,6 +164,7 @@ const Signup = () => {
             // An error happened.
         });
     }
+
     /*----------------End Create User Using Email and Password -----------------*/
     return (
         <div className="signup">
