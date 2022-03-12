@@ -1,44 +1,29 @@
-[debug] [2022-03-09T14:32:34.698Z] ----------------------------------------------------------------------
-[debug] [2022-03-09T14:32:34.700Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Arnob\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
-[debug] [2022-03-09T14:32:34.700Z] CLI Version:   10.2.2
-[debug] [2022-03-09T14:32:34.701Z] Platform:      win32
-[debug] [2022-03-09T14:32:34.701Z] Node Version:  v16.13.2
-[debug] [2022-03-09T14:32:34.702Z] Time:          Wed Mar 09 2022 08:32:34 GMT-0600 (Central Standard Time)
-[debug] [2022-03-09T14:32:34.702Z] ----------------------------------------------------------------------
+[debug] [2022-03-11T15:36:12.623Z] ----------------------------------------------------------------------
+[debug] [2022-03-11T15:36:12.625Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Arnob\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-03-11T15:36:12.626Z] CLI Version:   10.2.2
+[debug] [2022-03-11T15:36:12.626Z] Platform:      win32
+[debug] [2022-03-11T15:36:12.626Z] Node Version:  v16.13.2
+[debug] [2022-03-11T15:36:12.627Z] Time:          Fri Mar 11 2022 09:36:12 GMT-0600 (Central Standard Time)
+[debug] [2022-03-11T15:36:12.627Z] ----------------------------------------------------------------------
 [debug] 
-[info] i  Firebase optionally collects CLI usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
- 
-[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
-[info] 
-[info] Visit this URL on this device to log in:
-[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=298688295&redirect_uri=http%3A%2F%2Flocalhost%3A9005
-[info] 
-[info] Waiting for authentication...
-[debug] [2022-03-09T14:32:39.087Z] Error: spawn cmd ENOENT
-    at Process.ChildProcess._handle.onexit (node:internal/child_process:282:19)
-    at onErrorNT (node:internal/child_process:477:16)
-    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[debug] [2022-03-11T15:36:12.703Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-03-11T15:36:12.703Z] > authorizing via signed-in user (arnobchakma415@gmail.com)
+[debug] [2022-03-11T15:36:12.704Z] [iam] checking project vehicles-services for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-03-11T15:36:12.706Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/vehicles-services:testIamPermissions [none]
+[debug] [2022-03-11T15:36:12.706Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vehicles-services:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-03-11T15:36:14.416Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/vehicles-services:testIamPermissions 200
+[debug] [2022-03-11T15:36:14.416Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vehicles-services:testIamPermissions {}
+[debug] [2022-03-11T15:36:14.416Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project vehicles-services:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2022-03-11T15:36:14.418Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/vehicles-services [none]
+[debug] [2022-03-11T15:36:16.048Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/vehicles-services 403
+[debug] [2022-03-11T15:36:16.049Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/vehicles-services {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2022-03-11T15:36:16.049Z] HTTP Error: 403, The caller does not have permission
+[debug] [2022-03-11T15:36:16.456Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (C:\Users\Arnob\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:47:12)
+    at RetryOperation._fn (C:\Users\Arnob\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:286:39)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
 [error] 
-[error] Error: An unexpected error has occurred.
-[debug] [2022-03-09T16:02:52.642Z] ----------------------------------------------------------------------
-[debug] [2022-03-09T16:02:52.644Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Arnob\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
-[debug] [2022-03-09T16:02:52.645Z] CLI Version:   10.2.2
-[debug] [2022-03-09T16:02:52.645Z] Platform:      win32
-[debug] [2022-03-09T16:02:52.645Z] Node Version:  v16.13.2
-[debug] [2022-03-09T16:02:52.647Z] Time:          Wed Mar 09 2022 10:02:52 GMT-0600 (Central Standard Time)
-[debug] [2022-03-09T16:02:52.647Z] ----------------------------------------------------------------------
-[debug] 
-[info] i  Firebase optionally collects CLI usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
- 
-[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
-[info] 
-[info] Visit this URL on this device to log in:
-[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=177208025&redirect_uri=http%3A%2F%2Flocalhost%3A9005
-[info] 
-[info] Waiting for authentication...
-[debug] [2022-03-09T16:02:55.904Z] Error: spawn cmd ENOENT
-    at Process.ChildProcess._handle.onexit (node:internal/child_process:282:19)
-    at onErrorNT (node:internal/child_process:477:16)
-    at processTicksAndRejections (node:internal/process/task_queues:83:21)
-[error] 
-[error] Error: An unexpected error has occurred.
+[error] Error: Failed to get Firebase project vehicles-services. Please make sure the project exists and your account has permission to access it.
